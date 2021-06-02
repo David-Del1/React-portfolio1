@@ -1,0 +1,47 @@
+.Home {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  width: 80%;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  font-size: 3.5rem;
+  span {
+    color: #037FFF;
+  }
+}
+
+.home-sub-text {
+  text-align: center;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+
+  .icon-link {
+    margin-right: 1rem;
+    
+    .icon {
+      font-size: 3rem;
+      color: #a4acc4;
+      transition: all .2s ease-in-out;
+    }
+    .yt:hover {
+      color: red;
+    }
+    .gh:hover {
+      color: purple;
+    }
+    .fb:hover {
+      color: blue;
+    }
+  }
+
+  
+}

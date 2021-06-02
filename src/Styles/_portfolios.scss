@@ -1,0 +1,154 @@
+.Portfolio {
+
+}
+
+.portfolios {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+
+  @media screen and (max-width: 1600px){
+        grid-template-columns: repeat(2, 1fr);
+    }
+    @media screen and (max-width: 900px){
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+  .portfolio {
+
+    .image-data {
+      position: relative;
+      overflow: hidden;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 10px;
+        left: 12px;
+        height: calc(200px - 20px);
+        width: calc(100% - 20px);
+        background-color: rgb(63, 109, 184);
+        transform-origin: center;
+        transform: scale(0);
+        transition: all .3s ease-in-out;
+        opacity: 0.6;
+        overflow: hidden;
+      }
+
+      &:hover::before {
+        transform: scale(1);
+      }
+
+      img{
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      .hover-items {
+      list-style: none;
+      position: absolute;
+      top: 70%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 3rem;
+      padding: 16px 32px;
+      visibility: hidden;
+
+      li{
+
+        a{
+          padding: 16px;
+          text-decoration: none;
+          color: inherit;
+          font-family: inherit;
+          border-radius: 10px;
+          background-color: #037FFF;
+          color: white;
+
+          &:not(:last-child) {
+            margin-right: 32px;
+          }
+        }
+      }
+    }
+
+    &:hover {
+      .hover-items {
+        transition: all 0.2s ease-in-out .2s;
+        visibility: visible;
+        top: 50%;
+      }
+    }
+    }
+
+    
+
+    h5 {
+      font-size: 1.6rem;
+      font-weight: 600;
+      color: white;
+      transition: color 0.2s ease-in-out;
+      cursor: pointer;
+
+      &:hover {
+        color: #037FFF;
+      }
+    }
+  }
+}
+
+// Category CSS
+
+.cat-link {
+ 
+  background-color: transparent;
+  border: none;
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+  font-size: inherit;
+  font-family: inherit;
+  transition: all 0.2s ease-in-out;
+  background-color: #0381ffaa;
+  padding: 12px;
+  width: 130px;
+  text-align: center;
+  margin-bottom: 36px;
+
+  &:hover {
+    background-color: ivory;
+    color: #037FFF;
+  }
+
+  &:active{
+    background-color: ivory;
+  }
+  
+  &:focus{
+    background-color: ivory;
+    color: #037FFF;
+  }
+
+  &:not(:last-child) {
+    margin-right: 16px;
+  }
+
+  // @media screen and (max-width: 1270px){
+  //       margin: 2rem 5rem;
+  //   }
+  // @media screen and (max-width: 1100px){
+  //     margin: 2rem 2rem;
+  // }
+}
+
+.Categories {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-wrap: wrap;
+  
+}
